@@ -1,0 +1,185 @@
+@background: #2B2B2B;
+@foreground: #E6E1DC;
+
+
+
+// CODE EDITOR
+// ================================================
+
+// Overall Editor Styles
+.CodeMirror, .CodeMirror-scroll {
+    background-color: @background;
+    color: @foreground;
+}
+
+
+// Add padding to left side of code lines
+.CodeMirror pre {
+	padding: 0 15px 0 7px;
+}
+
+
+// Currently active line
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background: #252525;
+}
+.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+    box-shadow: inset 15px 0 0 0 #000;
+}
+.CodeMirror-focused .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+    }
+    .inline-widget .CodeMirror-gutter-elt {
+        color: #767676;    
+    }
+}
+
+// Standard Property Values
+.cm-atom, .cm-hr {color: #6C99BB;}
+
+// Strings
+.cm-string, .cm-string-2 { color: #a5c261; }
+
+// Numbers
+.cm-number, .cm-attribute, .cm-plus {color: #3472AD;}
+
+// Function/Definition Names
+.cm-def, .cm-property {color: #cc762e;}
+
+// Variables, Operators
+.cm-variable, .cm-variable-2, .cm-variable-3, .cm-operator, .cm-meta, .cm-bracket {color: @foreground;}
+
+// Comments
+.cm-comment {
+  color: #ae9355;
+  font-style: italic;
+}
+
+// Script Start tags (eg. <doctype> and <?php?>)
+.cm-meta {color:#9D9D9D }
+
+// Variables
+.cm-variable {color:#A1617A; }
+.cm-variable-2 {color:#D0D0FF; }
+.cm-variable-3 {color:#6C99BB; }
+
+.cm-error, .cm-minus {color: #a82b26;}
+.cm-header {color: #d85896;}
+.cm-link {
+  color: #a5c261;
+  font-underline: underline;
+}
+.cm-rangeinfo {color: #6c71c4;}
+.cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {color: @foreground;}
+
+// CSS Selectors
+.cm-builtin,.cm-m-css.cm-tag,.cm-m-css.cm-qualifier {color:@foreground - 50;}
+
+// HTML Tags
+.cm-tag {color:#FFC66D;}
+
+// HTML Attributes
+.cm-attribute {color:#CC7832;}
+
+// Keywords
+.cm-keyword {color:#cc762e;}
+
+// Properties
+.cm-property {color: #A1617A;}
+
+// Operators (+, -, /, etc.)
+.cm-operator {color:#B7B300}
+
+
+
+// Text Selection Color
+.CodeMirror-focused .CodeMirror-selected {
+    background: rgba(95, 106, 124, 0.38);
+}
+
+// Matching Brackets
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+	background-color: rgba(108, 153, 187, 0.25);	
+}
+
+// Matching Brackets for CSS, JS, PHP
+.cm-m-css,
+.cm-m-javascript,
+.cm-m-clike  {
+	&.CodeMirror-matchingbracket,
+	&.cm-m-javascript.CodeMirror-matchingtag {
+		background-color: rgba(108, 153, 187, 0.45);	
+		color: inherit !important;
+	}
+}
+	
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: none !important;
+    border-bottom: 1px solid @foreground;
+}
+
+
+
+
+
+
+// GUTTER (Space to left of text editor)
+// ================================================
+
+
+.CodeMirror-gutters {
+    background-color: @background + 10;
+    border-right: none;
+}
+
+.CodeMirror-linenumber {
+    color: #575757;
+	font-size: 9px;
+}
+
+
+
+
+
+
+
+
+// Extra CSS
+// ================================================
+
+// SEARCH
+.CodeMirror-searching {
+    background-color: #d3cd69;
+    &.searching-current-match {
+        background-color: #f6a644;
+    }
+}
+
+// Text cursor
+.CodeMirror-cursor {
+    border-left: 1px solid @foreground !important;
+}
+
+
+
+
+
+.CodeMirror .CodeMirror-selected {
+    background: grey;
+}
+
+
+/* Non-editor styling */
+
+
+.image-view,
+.not-editor {
+    background-color: @background;
+}
+
+.view-pane .image-view {
+    color: @foreground;
+}
