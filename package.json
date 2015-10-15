@@ -3,7 +3,7 @@
     "title": "Tonight's Specials",
     "description": "A remake of 'Specials Board' theme included with Coda 2 for Brackets, based on the Specials Menu theme by Max Isom (http://electrichaircut.com)",
     "homepage": "https://github.com/thomhines/tonights-specials",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "author": "Thom Hines",
     "license": "MIT",
     "theme": {
@@ -11,5 +11,5 @@
         "dark": true,
 		"addModeClass": true
     },
-    "keywords": ["theme"]
+    "keywords": ["theme dark coda readable"]
 }
